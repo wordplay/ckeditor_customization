@@ -1,0 +1,12 @@
+<% provide(:title, "Message") %>
+<h1>Message</h1>
+<div class="row">
+  <div class="span4">
+    <p>Message by</p>
+    <p><%= @message.name %></p>
+  </div>
+  <div class="span8">
+    <p>Message text</p>
+    <p><%= @message.message_text %></p>
+  </div>
+</div>

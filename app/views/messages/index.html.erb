@@ -1,0 +1,25 @@
+<% provide(:title, "All Messages") %>
+<h1>All Messages</h1>
+<div class="row">
+  <div class="span3">Name</div>
+  <div class="span6">Message</div>
+  <div class="span3">Links</div>
+</div>
+<% @messages.each do |message| %>
+  <div class="row">
+    <div class="span3"><%= message.name %></div>
+    <div class="span6"><%= message.message_text %></div>
+    <div class="span3">
+      <%= link_to "Show", message %>
+      <%= link_to "Edit", edit_message_path(message) %>
+      <%= link_to "Delete", message_path(message),
+                    method: :delete,
+                    data: { confirm: 'Really delete this message?' } %>
+    </div>
+  </div>
+<% end %>
+<% if @messages.empty? %>
+  <div class="row">
+    There are no messages to show.
+  </div>
+<% end %>

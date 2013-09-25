@@ -1,0 +1,19 @@
+<% provide(:title, "Update Message") %>
+<h1>Update Message</h1>
+<%= form_for :message, url: message_path(@message), method: :patch do |f| %>
+  <%= render 'shared/error_messages', object: @message %>
+  
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :message_text %><br>
+    <%= f.text_area :message_text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

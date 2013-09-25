@@ -6,6 +6,8 @@ MvcTutorial::Application.routes.draw do
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
 
+  resources :messages
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
