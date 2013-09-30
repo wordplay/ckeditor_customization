@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MvcTutorial::Application.load_tasks
+CkeditorTutorial::Application.load_tasks
