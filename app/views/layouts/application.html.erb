@@ -22,6 +22,34 @@
     <script type="text/javascript">
       $('textarea').ckeditor({
         // optional config
+        extraPlugins: 'stylesheetparser',
+
+        // Stylesheet for the contents.
+        contentsCss: '/assets/custom.css',
+
+        stylesSet: [
+          {
+            name: 'Yellow Background',
+            element: 'div',
+            styles: {
+              padding: '5px 10px',
+              'background-color': 'Yellow',
+              border: '1px solid #ccc'
+            }
+          },
+          {
+            name: 'Red Background',
+            element: 'div',
+            attributes: {
+              'class': 'red-background'
+            }
+          }
+        ],
+
+        toolbar: [
+          { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'RemoveFormat' ] },
+          { name: 'source', items: [ 'Source', 'CreateDiv' ] }
+        ]
       });
     </script>
 

@@ -72,3 +72,9 @@ footer {
   margin-top: 45px;
   @include box_sizing;
 }
+
+.red-background {
+  padding: 5px 10px;
+  background-color: red;
+  border: 1px solid #ccc;
+}
